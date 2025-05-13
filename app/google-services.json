@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "275473602206",
+    "firebase_url": "https://wallet-db-43741-default-rtdb.firebaseio.com",
+    "project_id": "wallet-db-43741",
+    "storage_bucket": "wallet-db-43741.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275473602206:android:51017bf47b081ce3d74d8f",
+        "android_client_info": {
+          "package_name": "com.example.diplomwork"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfKuSB0ulrmpCkfJVpPW2nkvrpaQu7Vtg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

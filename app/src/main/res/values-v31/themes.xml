@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.DiplomWork" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="android:windowSplashScreenBackground">@color/white</item>
+
+        <item name="android:statusBarColor">#B5CEF5</item>
+        <!-- Верхний статус-бар -->
+
+        <!-- Активный фон иконки Bottom Navigation -->
+        <item name="colorSecondaryContainer">#53699E</item>
+
+        <!-- Цвет текста/иконки в активном состоянии -->
+        <item name="colorOnSecondaryContainer">#B5CEF5</item>
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+</resources>

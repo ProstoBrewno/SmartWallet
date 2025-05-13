@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.DiplomWork" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="android:statusBarColor">#B5CEF5</item>
+        <!-- Верхний статус-бар -->
+
+        <!-- Активный фон иконки Bottom Navigation -->
+        <item name="colorSecondaryContainer">#53699E</item>
+
+        <!-- Цвет текста/иконки в активном состоянии -->
+        <item name="colorOnSecondaryContainer">#B5CEF5</item>
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.MyApp" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Фон Splash Screen -->
+
+    </style>
+
+    <style name="Theme.MyApp.Fullscreen" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+
+    <style name="Theme.DiplomWork" parent="Base.Theme.DiplomWork" />
+</resources>

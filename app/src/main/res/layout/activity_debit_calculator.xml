@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    tools:context=".DebitCalculator">
+
+    <!-- Заголовок -->
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Калькулятор вклада"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Начальная сумма вклада -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextInitialAmountLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView14"
+        android:layout_marginTop="32dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextInitialAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Начальная сумма вклада"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Процентная ставка -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextInterestRateLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextInitialAmountLayout"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextInterestRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Процентная ставка"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Срок вклада -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextDurationLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextInterestRateLayout"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Срок вклада (в месяцах)"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Кнопка рассчитать -->
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginTop="32dp"
+        android:text="Рассчитать"
+        android:textColor="#53699E"
+        android:backgroundTint="#B5CEF5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextDurationLayout" />
+
+    <!-- Результат -->
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginTop="32dp"
+        android:text="Результат"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonCalculate" />
+
+    <!-- Кнопка Назад -->
+    <Button
+        android:id="@+id/Back2"
+        android:layout_width="160dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="32dp"
+        android:text="Назад"
+        android:textColor="#53699E"
+        android:backgroundTint="#B5CEF5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

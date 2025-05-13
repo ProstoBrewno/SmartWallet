@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Поле для суммы -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/amountInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/amountEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Сумма"
+            android:inputType="numberDecimal"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Поле для даты -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dateInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintTop_toBottomOf="@id/amountInputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dateEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Дата пополнения"
+            android:focusable="false"
+            android:clickable="true"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Поле для описания -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/descriptionInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintTop_toBottomOf="@id/dateInputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/descriptionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Описание дохода"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Кнопка сохранения -->
+    <!-- Кнопка "Назад" -->
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="160dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="32dp"
+        android:text="Сохранить"
+        android:textColor="#53699E"
+        android:backgroundTint="#B5CEF5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="160dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="32dp"
+        android:text="Назад"
+        android:textColor="#53699E"
+        android:backgroundTint="#B5CEF5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Прогресс бар -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:textColor="#53699E"
+        android:backgroundTint="#B5CEF5"
+        android:progressTint="#3F51B5" />
+
+    <!-- Список акций -->
+    <LinearLayout
+        android:id="@+id/stocksListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+        <!-- Динамически добавляемые элементы будут располагаться здесь -->
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeFragmentRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    tools:context=".HomeFragment">
+
+    <!-- Баланс -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textView5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0,00 р."
+        android:textSize="34sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Дата -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Сегодня 6 июня"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        app:layout_constraintTop_toBottomOf="@id/textView5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Подзаголовок "Добавить" -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Добавить"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/textView6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="22dp" />
+
+    <!-- Кнопки доход/расход -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/incomeButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Доход"
+        android:textColor="#53699E"
+
+        app:cornerRadius="16dp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:layout_constraintTop_toBottomOf="@id/textView7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/expenseButton"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/expenseButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Расход"
+        android:textColor="#53699E"
+        app:cornerRadius="16dp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:layout_constraintTop_toBottomOf="@id/textView7"
+        app:layout_constraintStart_toEndOf="@+id/incomeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="8dp" />
+
+    <!-- Кнопка выбора даты -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/selectDateButton"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Выбрать дату"
+        android:textColor="#53699E"
+        android:backgroundTint="#B5CEF5"
+        app:cornerRadius="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/incomeButton" />
+
+    <!-- Кнопка Сегодня -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/todayButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Сегодня"
+        android:textColor="#53699E"
+        android:backgroundTint="#B5CEF5"
+        app:cornerRadius="12dp"
+        style="@style/Widget.MaterialComponents.Button"
+        app:layout_constraintTop_toBottomOf="@id/expenseButton"
+        app:layout_constraintStart_toEndOf="@id/selectDateButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="8dp" />
+
+    <!-- Список операций -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintTop_toBottomOf="@id/selectDateButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/operationsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="4dp" />
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
